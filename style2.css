@@ -79,6 +79,7 @@ nav a:hover{
     border-radius: 50px;
     border: none;
     font-size: 1rem;
+    text-decoration: none;
     font-weight: 500;
     transition: background-color 0.2s ease;
     cursor: pointer;
