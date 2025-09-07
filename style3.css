@@ -82,5 +82,48 @@
 }
 
 .ibuttons{
-    
+    position: absolute;
+    inset: calc(var(--border-width) * -1);
+    pointer-events: none;
+
+}
+
+.ibuttons .left , .ibuttons .right{
+    position: absolute;
+    width: var(--button-width);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+
+
+}
+
+.ibuttons .left{
+    right: 100%;
+    top: calc(var(--border-radius) * 2);
+
+}
+
+.ibuttons .left .button:nth-child(1){
+    height: 3em;
+    margin-bottom: 0.5em;
+
+}
+
+.ibuttons .right{
+    left: 100%;
+    transform: scale3d(-1,1,1);
+    top: calc(var(--border-radius) * 3);
+
+}
+
+.ibuttons .right .ibutton{
+    height: 9.5em;
+}
+
+.ibuttons .ibutton{
+    background: hsl(var(--c-h), 20%, 95%);
+    height: 6em;
+
 }
