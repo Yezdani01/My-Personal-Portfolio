@@ -232,4 +232,28 @@
 
 .notch-container{
     position: absolute;
+    z-index: 3;
+    top: var(--pad);
+    right: var(--pad);
+    left: var(--pad);
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    max-height: calc(var(--notch-radius) * 2);
+    pointer-events: none;
+    outline: none;
+    transition: var(--notch-duration) var(--ease);
+    transition-property: max-height,max-width,filter,transform;
+    outline: none;
+    will-change: max-width,max-height,filter;
 }
+
+.notch-container:hover, .notch-container:focus-within{
+    --shadow-opacity: 0.5s;
+    transition-timing-function: var(--ease-spring);
+}
+
+.notch-container:hover .icontent, .notch-container:focus-within .icontent{
+    
+}
+
