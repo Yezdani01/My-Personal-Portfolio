@@ -8,6 +8,32 @@
     padding: 0;
 }
 
+.card-skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgba(255, 255, 255, 0.1); Semi-transparent background */
+    backdrop-filter: blur(20px); /* This creates the frosted glass effect */
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.2), 0 0 20px rgba(147, 112, 219, 0.2); /* Dual-color glow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    color: rgb(17, 17, 17); /* Ensures text is visible */
+}
+
+.card-skill:hover {
+    transform: translateY(-10px) scale(1.05); /* Lifts the card on hover */
+    box-shadow: 0 0 30px rgba(0, 191, 255, 0.5), 0 0 30px rgba(147, 112, 219, 0.5); /* Intensifies the glow */
+}
+
+.card-skill svg {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+}
+
 
 .banner{
     width: 100%;
@@ -38,10 +64,16 @@
 .banner .slider .item{
     position: absolute;
     inset: 0 0 0 0;
-    transform: 
+    /* transform: 
         rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-        translateZ(550px);
+        translateZ(550px); */
 }
+
+.banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(350px);
+    }
 .banner .slider .item img{
     width: 100%;
     height: 100%;
@@ -78,7 +110,7 @@
     color: transparent;
 }
 .banner .content .author{
-    font-family: Poppins;
+    font-family: "Poppins";
     text-align: right;
     max-width: unset;    /* word overflow now fixed (removed 200px cap) */
     width: auto;         /* word overflow now fixed (allow natural width) */
