@@ -8,6 +8,7 @@ It features **3D animations, interactive models**, a responsive layout, and a mo
 - Embedded **3D model** for enhanced interactivity  
 - Fully responsive across devices (desktop, tablet, mobile)  
 - Clean typography and modern design  
+- More interative Sections are in progress
 - Sections for About, Skills, and Projects (in progress)  
 
 ## 🛠️ Built With  
