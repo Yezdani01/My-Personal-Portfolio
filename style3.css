@@ -346,5 +346,8 @@
     will-change: padding;
 }
 
+.icontent .left, .icontent .right{
+    height: 100%;
+}
 
 
