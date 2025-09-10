@@ -494,14 +494,19 @@ input[type=radio]{
     box-sizing: border-box;
     transition: 0.333s var(--ease-out);
     transition-property: border-color,transform;
-    background: radial-gradient(100% 100% at 50% 30%, var(--swatch-s1), var(--swaatch-s2));
+    background: radial-gradient(100% 100% at 50% 30%, var(--swatch-s1), var(--swatch-s2));
     opacity: 0;
     transform: translate3d(0,20%,0) scale3d(0.75, 0.75,1);
     -webkit-animation: appear 0.333s var(--ease-out) forwards 0.75s;
     animation: appear 0.333s var(--ease-out) forwards 0.75s;
-
-
 }
+
+.swatch:nth-child(1){
+    transform-origin: 80% 200%;
+    
+}
+
+
 
 
 
