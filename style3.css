@@ -25,7 +25,9 @@
     --c-s: 100%;
     --c-l:50%;
 } */
-
+::-webkit-scrollbar {
+  display: none;
+}
 
 
 :root {
@@ -95,7 +97,12 @@
     -webkit-animation: appear 1s var(--ease-out) forwards;
     animation: appear 1s var(--ease-out) forwards;
     -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
 }
+
+
+
 
 .phone::before{
     content: "";
