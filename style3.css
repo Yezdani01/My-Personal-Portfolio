@@ -81,6 +81,7 @@
     min-height: 100vh;
     font-family: 'Inter';
     font-size: var(--size);
+
 }
 
 .phone{
@@ -93,7 +94,7 @@
     box-shadow: 0 0 0.1em 0.25em hsl(var(--c-h), 20%, 25%), 0 0 0 var(--border-width) hsl(var(--c-h), 30%, 85%);
     box-sizing: border-box;
     opacity: 0;
-    transform: scale3d(1.1,1.1,1);
+    transform: scale3d(1.1 ,1.1 ,1);
     -webkit-animation: appear 1s var(--ease-out) forwards;
     animation: appear 1s var(--ease-out) forwards;
     -webkit-backface-visibility: hidden;
