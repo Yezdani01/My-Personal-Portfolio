@@ -1,0 +1,54 @@
+html{scroll-behavior:smooth}
+
+.topnav{position:fixed;top:1rem;left:50%;transform:translateX(-50%);display:flex;gap:1.6rem;padding:.7rem 1.6rem;
+  border-radius:50px;background:rgba(0,0,0,.45);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.15);z-index:9999}
+.topnav a{color:#e7e7e7;text-decoration:none;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;transition:color .2s}
+.topnav a:hover{color:#a7a7a7}
+@media (max-width:600px){.topnav{gap:.9rem;padding:.6rem 1rem}.topnav a{font-size:.7rem}}
+
+.page{position:relative;overflow:hidden;isolation:isolate;background:#00000a;color:#e7e7e7;padding:8rem 0;
+  font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.page .layer-blur{opacity:.3}
+.page.alt .layer-blur{left:0;right:auto}
+.page-inner{width:min(1100px,90vw);margin:0 auto}
+.sect-tag{width:14rem}
+.page-title{font-size:clamp(2.2rem,5vw,4rem);font-weight:600;letter-spacing:.1em;line-height:1.2;margin:1.5rem 0 .8rem;
+  text-shadow:0 0 10px rgba(128,128,128,.418)}
+.page-lead{font-size:1.2rem;letter-spacing:.05em;color:grey;max-width:35rem;margin-bottom:3.5rem}
+.page .chips i{font-size:.85rem}
+
+/* experience timeline */
+.timeline{position:relative;display:grid;gap:2rem;padding-left:2.2rem}
+.timeline::before{content:"";position:absolute;left:.35rem;top:0;bottom:0;width:2px;background:linear-gradient(#7f42a7,#5300a0,transparent)}
+.tl-item{position:relative;padding:1.6rem 1.8rem;border-radius:1rem;background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(20px);
+  box-shadow:0 0 20px rgba(0,191,255,.12),0 0 20px rgba(147,112,219,.15);transition:box-shadow .3s ease}
+.tl-item:hover{box-shadow:0 0 30px rgba(0,191,255,.4),0 0 30px rgba(147,112,219,.4)}
+.tl-item::before{content:"";position:absolute;left:-2.3rem;top:2rem;width:.9rem;height:.9rem;border-radius:50%;
+  background:#000;border:2px solid #7f42a7;box-shadow:0 0 12px #7f42a7}
+.tl-item h3{font-size:1.5rem;font-weight:600;letter-spacing:.04em}
+.tl-org{color:#a77bff;font-size:1.1rem}
+.tl-meta{color:grey;font-size:.95rem;margin:.2rem 0 1rem}
+.tl-item ul{padding-left:1.2rem;margin-bottom:1.2rem;color:#cfcfcf;line-height:1.7}
+.chip-now{display:inline-block;padding:.1rem .6rem;border-radius:50px;font-size:.75rem;color:#fff;letter-spacing:.1em;text-transform:uppercase;
+  background:linear-gradient(to right,#655665,#7f42a7,#6600c5,#5300a0,#757575,#655665);background-size:200%;
+  animation:animationGradient 2.5s linear infinite}
+
+/* projects */
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.8rem}
+.proj-grid > div{display:flex}
+.proj-card{flex:1;display:flex;flex-direction:column;gap:.8rem;padding:1.6rem;border-radius:1rem;text-decoration:none;color:inherit;
+  backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.2);
+  box-shadow:0 0 20px rgba(0,191,255,.2),0 0 20px rgba(147,112,219,.2);transition:transform .3s ease,box-shadow .3s ease}
+.proj-card:hover{transform:translateY(-10px) scale(1.03);box-shadow:0 0 30px rgba(0,191,255,.5),0 0 30px rgba(147,112,219,.5)}
+.proj-card h3{font-size:1.4rem;letter-spacing:.04em}
+.proj-card .sub{color:#a77bff;font-size:.95rem}
+.proj-card p{color:#bdbdbd;line-height:1.6;flex:1}
+.proj-card .go{font-size:.95rem;letter-spacing:.1em}
+
+/* contact + footer */
+.contact{text-align:center}
+.contact .page-lead{margin:0 auto 2.5rem}
+.contact .buttons{justify-content:center;margin-top:0}
+.page .btn-get-started{color:#e7e7e7}
+.foot{background:#00000a;color:#555;text-align:center;padding:2rem;font-size:.9rem}

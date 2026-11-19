@@ -91,7 +91,8 @@
     color:#e7e7e7;
     font-family:'Inter';
     font-size:var(--size);
-    height:600vh;            /* 100vh × number of steps (6) */
+    /* height:600vh;            100vh × number of steps (6) */
+    height: 900vh;
     position:relative;
 }
 .stage{
@@ -800,3 +801,27 @@ input[type=radio]{
 
 /* run the phone's entrance animation when it scrolls into view, not on page load */
 .iphone-page-body:not(.in-view) :is(.phone,.swatch){ animation-play-state:paused; }
+
+/* ---- step rail + hint ---- */
+.rail{position:absolute;right:3vw;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:1.6em;z-index:5}
+.rail button{all:unset;cursor:pointer;display:flex;flex-direction:row-reverse;align-items:center;gap:1em;
+  font-size:1.3em;letter-spacing:.15em;text-transform:uppercase;color:#777;transition:color .3s}
+.rail button::before{content:"";width:1em;height:1em;border-radius:50%;border:1px solid currentColor;transition:.3s}
+.rail button span{opacity:0;transform:translateX(.8em);transition:.3s}
+.rail button:hover,.rail button.is-active{color:#fff}
+.rail button:hover span,.rail button.is-active span{opacity:1;transform:none}
+.rail button.is-active::before{background:var(--accent);border-color:var(--accent);box-shadow:0 0 1em var(--accent);transform:scale(1.3)}
+.rail button:focus-visible{outline:2px solid var(--accent);outline-offset:.4em}
+.stage-hint{position:absolute;bottom:1.5em;left:50%;transform:translateX(-50%);font-size:1.3em;
+  letter-spacing:.1em;color:grey;white-space:nowrap;transition:opacity .6s}
+.stage-hint.is-done{opacity:0}
+@media (max-width:1000px){ .rail span{display:none} .rail{right:1.5vw}
+  .stage-hint{white-space:normal;text-align:center;width:80%} }
+
+/* ---- shared by the phone screens ---- */
+.app-sub{font-size:1.7em;color:#bbb;line-height:1.5;letter-spacing:.05em}
+.app .tag{font-size:1.6em}
+.nudge{display:inline-block;margin-left:.5em;animation:nudge 1.2s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateY(.4em)}}
+.chips{display:flex;flex-wrap:wrap;gap:.7em}
+.chips i{font-style:normal;font-size:1.25em;padding:.4em .9em;border-radius:50px;border:1px solid rgba(255,255,255,.25);color:#ddd}
